@@ -1,0 +1,173 @@
+
+-v0.1-
+-Initial build.
+
+-v0.2-
+-Changed the output of "Acorns to Cobweb" from 1 to 2.
+-Added the "Hay to Cobweb" recipe.
+
+-v0.3-
+-Added a recipe to allow crafting of the Sickle using Stone. To ensure that it isn't abused, it requires 128 Stone.
+-Increased cost of Coal from 4 Wood to 8 Wood.
+-Removed the "Leather to Cobweb" recipe.
+
+-v0.4-
+-Redesigned the way you obtain and use Silk by allowing the player to craft the Loom at a Work Bench.
+	-Because of this change, the custom Silk and Bed recipes have been removed.
+
+-v0.5-
+-Changed the way creating certain Earthly Materials works.
+	-Instead of Clay being made from Silt, it is made from Mud.
+	-Dirt is made using Silt and Sand.
+-Removed the ability to craft a Loom at a Work Bench.
+	-Added the ability to craft a Sawmill at a Work Bench using Wood and Stone.
+-Reduced the Leather's requirement of Silk from 7 to 4.
+-Added a recipe for the Extractinator.
+
+-v0.6-
+-Added recipes for Life Crystals and Life Fruits.
+
+-v0.7-
+-Updated to tModLoader 1.4.
+-Added a recipe for the Void Bag.
+-Rebalanced some recipes.
+-Added some Fruit Growth recipes.
+-Reduced the material cost of the Extractinator.
+-Reduced the cost of Cobweb from Hay.
+-Added a recipe to craft Hay from Cobweb.
+-Added a recipe for growing more Acorns.
+-Added a recipe for the Bug Net.
+-Set the value of Terraria's Void Bag to 500 to align with the recipe for it.
+-Removed the recipes for the Life Crystals and Life Fruits.
+-Dirt can now also be made using Hay.
+-Added a recipe for the Staff of Regrowth.
+-Changed the recipe, damage and value of the Sickle.
+-Utilized GlobalProjectile to make the Void Bag's portal last only 10 seconds (to compensate for the easier crafting recipe).
+-Added Snow-related recipes.
+-The Player can now Scavenge for resources by pressing the provided Keybind.
+-Added a "Wood to Coal" recipe.
+-Coal now stacks up to 99.
+-Removed the Sawmill custom recipe.
+-Ash can now be crafted through Wood using a Furnace.
+-Coal is now crafted using Ash, not Wood.
+-Added a Mod Icon.
+
+-v0.7.1-
+-Fixed a bug with the Wood/Ash/Coal crafting process.
+-Added some Fruit recipes and rebalanced the overall roster. They now require their respective Mushroom to craft.
+
+-v0.7.2-
+-Reduced the Scavenge cooldown from 40 seconds to 20 seconds.
+-Lowered the Scavenge loot quantity.
+-All recipes that contained Wood now use the Recipe Group of it, not the Item itself. (In other words, any Wood type can now be used.)
+-Fixed a bug with Apricots not containing a Mushroom within their crafting recipe.
+-Removed the Acorn and Mushroom recipes. No more will you be able to mass-produce these rejuvenational materials.
+
+-v0.7.3-
+-Removed the Void Bag recipe.
+-Because of the change mentioned above, the modified Void Portal time has been removed.
+-Added the Wooden Stub, an emergency tool (in case you somehow lose your axe).
+-Rope is now crafted into Cobweb at the Loom.
+-4 Ash can now be crafted into 1 Stone Block.
+-Coal is no longer crafted into Stone Blocks.
+-Bombs and Grenades can now be crafted using Coal and Iron Bars.
+-Decreased the output of the "Hay to Dirt" recipe. It was 3. It is now 1.
+
+-v0.7.4-
+-The Wooden Stub can now mine Blocks, not just Trees.
+-Explosive Powder can now be crafted using Coal and 3 Bones.
+-Bombs and Grenades are no longer crafted with Coal, but with Explosive Powder.
+-Organized the file paths.
+
+-v0.7.5-
+-Acorns now result in 2 Cobweb, not 3.
+-Cobwebs results in 2 Hay now, not 3.
+-Reduced the Scavenge loot quantity.
+-Tattered Cloth can now be crafted into Silk at a Loom.
+-Mushrooms can now once again be reproduced, this time requiring 50 Hay instead of 3.
+-Vertebrae and Rotten Chunks can now be crafted alongside a Mushroom and Dirt to reproduce Mushrooms.
+-The "Dirt from Hay" recipe no longer requires a Work Bench.
+-To grant The Crimson and The Corruption fruits an advantage over the others, their respective recipes now result in 3, not 1.
+-All fruits now require 3 Dirt, not 1.
+
+-v0.7.6-
+-The Wooden Stub now has Right-Click functionality: Right-Clicking acts as a Hammer.
+-Clay now requires 2 Mud to craft, not 1.
+-The "Mud to Clay", "Ice to Snow" and "Snow to Ice" recipes no longer require Workstations.
+-Scavenge loot quantity and loot variety is now random.
+-Added Brown Moss to the Scavenge loot table.
+-Changed the Staff of Regrowth recipe. Replaced the Hay with Brown Moss and lowered the crafting cost of the material.
+
+-v0.7.7-
+__Gameplay__
+-Added Worm, Frog, Snail, Grubby, Buggy, Sluggy, Herb Bag and Can of Worms to the Scavenge loot table.
+-Removed Brown Moss and its recipes from the Scavenge loot table, as it was redundant.
+__Bug Fixes__
+-Removed the modified Void Bag value, since the Void Bag no longer partakes a role in this project.
+
+-v0.7.8-
+-Fixed the mod for the new Terraria update.
+
+-v0.8-
+-Added a config.
+-Rebalanced the Scavenge Loot chances and quantities.
+-Reduced the default Scavenge Cooldown from 10 seconds to 5 seconds.
+
+-v0.8.1-
+-Applied the config's recipe checks to the Global Item modifiers.
+-Added config options for which Scavenge Loot items are enabled for Scavenging.
+-Fixed the Water Bottle recipe. You no longer require a Work Bench.
+
+-v0.8.2-
+-Rebalanced the Tattered Cloth, Silk and Leather recipes.
+-Added Recycle recipes for the Tin Can, Old Shoe and Seaweed.
+-Added recipes for Cactus and Bamboo.
+-Added a recipe for the Tinkerer's Workshop.
+-Added tags to the Steam Workshop file.
+-Set the default options for Critter Scavenging to false.
+-Added Hay and Dirt to all Vegetational recipes.
+
+-v0.8.2.1-
+-Increased the maximum chance for Scavenging Hay, Cobweb and Acorns from 10 to 30.
+-Tweaked some Vegetational recipes.
+-Added recipes for Vile and Vicious Mushrooms.
+
+-v0.8.3-
+-Reworked the Scavenge mechanic into a Right-Click function. This will be expanded upon in the next update.
+
+-v0.8.4-
+-Added a few plant categories to the Scavenge mechanic and segregated that loot into those respective categories.
+-Because of the change above, the config has been simplified.
+-Added fruits to the Scavenge loot tables.
+
+-v0.8.5-
+-Added a recipe for the Living Loom.
+-Added the Vine item to the Scavenge mechanic's Common Plants, Uncommon Plants and Vines loot tables.
+-Modified some of the drop chances of the Scavenge loot table.
+-Added 2 Water Bottle recipes. (Cactus or Bamboo.)
+-Removed the Staff of Regrowth recipe.
+-Added a plethora of Seed recipes. (Grass, Jungle Grass, Mushroom Grass, Corrupt and Crimson.)
+-Further organized the recipes and config.
+-Added Mushroom Plants and Vines to the Scavenge mechanic's loot tables.
+-Corrupt Plants, when scavenged, now drop Purple Moss, not Blue Moss.
+-Reduced the crafting cost of Rope from 2 to 1.
+-Reworked the config to include icons and item drop chances.
+
+-v0.8.5.1-
+-Fixed the mod for the April changes of tModLoader.
+
+-v0.8.5.2-
+-Updated the mod for the June 2022 update of tModLoader.
+
+-v0.8.5.3-
+-Changed the Scavenge mechanic from a Right-Click ability to a simple "Tile Break" function. (In other words, plants are to be destroyed rather than Right-Clicked.)
+-Added configuration for Moss and Uncommon Plants, and adjusted the balancing accordingly.
+
+-v0.8.5.4-
+-Added the "Moss to Cobweb" recipe and the "Moss" Recipe Group.
+-Added Water Bucket, Lava Bucket and Honey Bucket recipes.
+
+-v0.8.5.5-
+-(For some reason, the mod didn't actually upload the update, so here I am, uploading it again. :moyai:) Updated the mod for the July 2022 update of tModLoader.
+-Changed the Mod Title from "Renewability" to "Renewability (Earthen Quality of Life)".
+-Changed the Mod Icon.

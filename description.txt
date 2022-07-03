@@ -1,0 +1,25 @@
+Terraria has an abundance of natural resources, but not many of them are reproducable. This project aims to change that and more.
+
+
+**Main features, all of which are configurable:**
+-A scavenge ability that allows Right-Clicking certain plants (such as grass, lily pads, cattails and sea oats) for resources.
+-Craftable fruits.
+-Renewable Stone, Silt, Sand, Dirt, Clay, and many other natural resources.
+-Recipes for Fabric-based materials, such as Hay, Cobweb, Silk, and Leather.
+-Vegetational Rejuvenation through Mushrooms, as they are an herb that potentially boosts plant growth.
+-Recipes for basic tools, like the Sickle, Bug Net and Staff of Regrowth.
+-Work Station recipes, such as the Extractinator, Tinkerer's Workshop and Ice Machine.
+
+
+-v0.8.5.3-
+-Changed the Scavenge mechanic from a Right-Click ability to a simple "Tile Break" function. (In other words, plants are to be destroyed rather than Right-Clicked.)
+-Added configuration for Moss and Uncommon Plants, and adjusted the balancing accordingly.
+
+-v0.8.5.4-
+-Added the "Moss to Cobweb" recipe and the "Moss" Recipe Group.
+-Added Water Bucket, Lava Bucket and Honey Bucket recipes.
+
+-v0.8.5.5-
+-(For some reason, the mod didn't actually upload the update, so here I am, uploading it again. :moyai:) Updated the mod for the July 2022 update of tModLoader.
+-Changed the Mod Title from "Renewability" to "Renewability (Earthen Quality of Life)".
+-Changed the Mod Icon.
