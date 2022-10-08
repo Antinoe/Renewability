@@ -10,14 +10,8 @@ namespace Renewability.Content.Recipes
 		{
 			if (RenewabilityConfig.Instance.enableFabrics)
 			{
-				Recipe.Create(ItemID.Rope,1)
+				Recipe.Create(ItemID.Rope,3)
 				.AddIngredient(ItemID.Cobweb, 1)
-				.AddTile(TileID.Loom)
-				.Register();
-				
-				Recipe.Create(ItemID.Cobweb,2)
-				.AddIngredient(ItemID.Rope, 1)
-				.AddTile(TileID.Loom)
 				.Register();
 				
 				Recipe.Create(ItemID.Cobweb,2)
