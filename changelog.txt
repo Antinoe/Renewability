@@ -171,3 +171,18 @@ __Bug Fixes__
 -(For some reason, the mod didn't actually upload the update, so here I am, uploading it again. :moyai:) Updated the mod for the July 2022 update of tModLoader.
 -Changed the Mod Title from "Renewability" to "Renewability (Earthen Quality of Life)".
 -Changed the Mod Icon.
+
+-v0.8.6-
+-Added a config option to grant Hay, Cobweb and Moss value, that way they may be sold.
+-Ropes are now craftable by hand, not at the Loom.
+-Reworked the entire Config for Scavenging.
+-Fixed the Moss recipe group. Red Moss has now been added.
+-Changed Scavenging back to a Right-Click feature.
+-Adjusted the values of the recipe changes.
+
+-v0.8.6.1-
+[-] There was an error with updating the mod 2 months ago, causing the game to think that an older version was the latest release. I am updating it again now to fix this issue.
+
+-v0.8.6.2-
+[=] Fixed the "Cobweb to Rope" recipe. It now results in 3 instead of 1.
+[+] A Glove icon will now display over Tiles that are Scavengeable (only if Scavenging is enabled for them).

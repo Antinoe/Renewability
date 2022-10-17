@@ -11,40 +11,40 @@ namespace Renewability
 {
     public class RenewabilityGlobalTile : GlobalTile
 	{
-        //public override void RightClick(int i, int j, int type)
-		public override void KillTile(int i, int j, int type, ref bool fail, ref bool effectOnly, ref bool noItem)
+		//public override void KillTile(int i, int j, int type, ref bool fail, ref bool effectOnly, ref bool noItem)
+        public override void RightClick(int i, int j, int type)
 		{
 			if (RenewabilityConfig.Instance.enableScavenging)
 			{
 				if (RenewabilityConfig.Instance.enableScavengingFromCommonPlants)
 				{
-					//Common Plants.
+//Common Plants.
 					if (type == TileID.Plants || type == TileID.Plants2 || type == TileID.JunglePlants || type == TileID.JunglePlants2 || type == TileID.MushroomPlants || type == TileID.CorruptPlants || type == TileID.CrimsonPlants)
 					{
-						//WorldGen.KillTile(i, j);
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsHay) == 0)
+						WorldGen.KillTile(i, j);
+						if (RenewabilityConfig.Instance.enableScavengingHay && Main.rand.Next(4) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Hay, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsCobweb) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingCobweb && Main.rand.Next(10) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Cobweb, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsAcorn) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingAcorn && Main.rand.Next(20) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Acorn, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsVine) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingVine && Main.rand.Next(80) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Vine, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsHerbBag) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingHerbBag && Main.rand.Next(160) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.HerbBag, 1);
 						}
 						if (type == TileID.Plants || type == TileID.Plants2)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.GreenMoss, 1);
 							}
@@ -74,7 +74,7 @@ namespace Renewability
 						}
 						if (type == TileID.JunglePlants || type == TileID.JunglePlants2)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.BrownMoss, 1);
 							}
@@ -92,14 +92,14 @@ namespace Renewability
 						}
 						if (type == TileID.MushroomPlants)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.BlueMoss, 1);
 							}
 						}
 						if (type == TileID.CorruptPlants)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.PurpleMoss, 1);
 							}
@@ -117,7 +117,7 @@ namespace Renewability
 						}
 						if (type == TileID.CrimsonPlants)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.RedMoss, 1);
 							}
@@ -135,29 +135,29 @@ namespace Renewability
 						}
 					}
 				}
-				//Uncommon Plants.
+//Uncommon Plants.
 				if (RenewabilityConfig.Instance.enableScavengingFromUncommonPlants)
 				{
 					if (type == TileID.SeaOats || type == TileID.Cattail || type == TileID.LilyPad)
 					{
-						//WorldGen.KillTile(i, j);
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceUncommonPlantsHay) == 0)
+						WorldGen.KillTile(i, j);
+						if (RenewabilityConfig.Instance.enableScavengingHay && Main.rand.Next(2) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Hay, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceUncommonPlantsCobweb) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingCobweb && Main.rand.Next(5) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Cobweb, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceUncommonPlantsAcorn) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingAcorn && Main.rand.Next(10) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Acorn, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceUncommonPlantsVine) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingVine && Main.rand.Next(40) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Vine, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceUncommonPlantsHerbBag) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingHerbBag && Main.rand.Next(80) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.HerbBag, 1);
 						}
@@ -177,51 +177,93 @@ namespace Renewability
 						}
 					}
 				}
-				//Vines.
+//Vines.
 				if (RenewabilityConfig.Instance.enableScavengingFromVines)
 				{
 					if (type == TileID.Vines || type == TileID.VineFlowers || type == TileID.JungleVines || type == TileID.MushroomVines || type == TileID.CrimsonVines)
 					{
-						//WorldGen.KillTile(i, j);
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsVine) == 0)
+						WorldGen.KillTile(i, j);
+						if (RenewabilityConfig.Instance.enableScavengingVine && Main.rand.Next(80) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Vine, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsHay) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingHay && Main.rand.Next(4) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Hay, 1);
 						}
-						if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsCobweb) == 0)
+						if (RenewabilityConfig.Instance.enableScavengingCobweb && Main.rand.Next(10) == 0)
 						{
 							Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.Cobweb, 1);
 						}
 						if (type == TileID.VineFlowers)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsHerbBag) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingHerbBag && Main.rand.Next(80) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.HerbBag, 1);
 							}
 						}
 						if (type == TileID.JungleVines)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.BrownMoss, 1);
 							}
 						}
 						if (type == TileID.MushroomVines)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.BlueMoss, 1);
 							}
 						}
 						if (type == TileID.CrimsonVines)
 						{
-							if (Main.rand.Next(RenewabilityConfig.Instance.scavengeChanceCommonPlantsMoss) == 0)
+							if (RenewabilityConfig.Instance.enableScavengingMoss && Main.rand.Next(10) == 0)
 							{
 								Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ItemID.RedMoss, 1);
 							}
+						}
+					}
+				}
+			}
+		}
+		
+		public override void MouseOver(int i, int j, int type)
+		{
+			Tile Tile = Main.tile[i, j];
+			Player Player = Main.LocalPlayer;
+			if (RenewabilityConfig.Instance.enableScavenging)
+			{
+				if (RenewabilityConfig.Instance.enableScavengingFromCommonPlants)
+				{
+					if (Tile.TileType == TileID.Plants || Tile.TileType == TileID.Plants2 || Tile.TileType == TileID.JunglePlants || Tile.TileType == TileID.JunglePlants2 || Tile.TileType == TileID.MushroomPlants || Tile.TileType == TileID.CorruptPlants || Tile.TileType == TileID.CrimsonPlants)
+					{
+						Player.cursorItemIconEnabled = true;
+						if (Tile.TileFrameX >= 0)
+						{
+							Player.cursorItemIconID = ItemID.PowerGlove;
+						}
+					}
+				}
+				else if (RenewabilityConfig.Instance.enableScavengingFromUncommonPlants)
+				{
+					if (type == TileID.SeaOats || type == TileID.Cattail || type == TileID.LilyPad)
+					{
+						Player.cursorItemIconEnabled = true;
+						if (Tile.TileFrameX >= 0)
+						{
+							Player.cursorItemIconID = ItemID.PowerGlove;
+						}
+					}
+				}
+				else if (RenewabilityConfig.Instance.enableScavengingFromVines)
+				{
+					if (type == TileID.Vines || type == TileID.VineFlowers || type == TileID.JungleVines || type == TileID.MushroomVines || type == TileID.CrimsonVines)
+					{
+						Player.cursorItemIconEnabled = true;
+						if (Tile.TileFrameX >= 0)
+						{
+							Player.cursorItemIconID = ItemID.PowerGlove;
 						}
 					}
 				}

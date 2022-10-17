@@ -1,4 +1,4 @@
 displayName = Renewability (Earthen Quality of Life)
 author = Antinous
-version = 0.8.5.5
+version = 0.8.6.2
 homepage = https://github.com/Antinoe/Renewability
