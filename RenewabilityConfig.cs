@@ -23,53 +23,46 @@ namespace Renewability
         [DefaultValue(true)]
         public bool enableScavengingFromCommonPlants {get; set;}
 		
-        [Label("[i:Hay] Hay Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop Hay.\n[Default: 4]")]
-        [Slider]
-        [DefaultValue(4)]
-        [Range(1, 30)]
-        [Increment(1)]
-        public int scavengeChanceCommonPlantsHay {get; set;}
+        [Label("Scavenge from Uncommon Plants")]
+        [Tooltip("If false, Players cannot Scavenge from Uncommon Plants, such as Cattails, Lily Pads and Sea Oats.\n[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingFromUncommonPlants {get; set;}
 		
-        [Label("[i:Cobweb] Cobweb Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop Cobweb.\n[Default: 10]")]
-        [Slider]
-        [DefaultValue(10)]
-        [Range(1, 30)]
-        [Increment(1)]
-        public int scavengeChanceCommonPlantsCobweb {get; set;}
+        [Label("[i:Hay] Scavenge Hay")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingHay {get; set;}
 		
-        [Label("[i:Acorn] Acorn Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop an Acorn.\n[Default: 20]")]
-        [Slider]
-        [DefaultValue(20)]
-        [Range(1, 30)]
-        [Increment(1)]
-        public int scavengeChanceCommonPlantsAcorn {get; set;}
+        [Label("[i:Cobweb] Scavenge Cobwebs")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingCobweb {get; set;}
 		
-        [Label("[i:GreenMoss] Moss Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop Moss.\n[Default: 10]")]
-        [Slider]
-        [DefaultValue(10)]
-        [Range(20, 200)]
-        [Increment(20)]
-        public int scavengeChanceCommonPlantsMoss {get; set;}
+        [Label("[i:Acorn] Scavenge Acorns")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingAcorn {get; set;}
 		
-        [Label("[i:Vine] Vine Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop a Vine.\n[Default: 80]")]
-        [Slider]
-        [DefaultValue(80)]
-        [Range(20, 200)]
-        [Increment(20)]
-        public int scavengeChanceCommonPlantsVine {get; set;}
+        [Label("[i:GreenMoss] Scavenge Moss")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingMoss {get; set;}
 		
-        [Label("[i:HerbBag] Herb Bag Scavenge Chance")]
-        [Tooltip("Chance for Common Plants to drop an Herb Bag.\n[Default: 80]")]
-        [Slider]
-        [DefaultValue(160)]
-        [Range(20, 200)]
-        [Increment(20)]
-        public int scavengeChanceCommonPlantsHerbBag {get; set;}
+        [Label("[i:Vine] Scavenge Vines")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingVine {get; set;}
+		
+        [Label("[i:HerbBag] Scavenge Herb Bags")]
+        [Tooltip("[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingHerbBag {get; set;}
+		
+		/*
+        [Label("Scavenge from Common Plants")]
+        [Tooltip("If false, Players cannot Scavenge from Common Plants, such as Grass and Mushrooms.\n[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableScavengingFromCommonPlants {get; set;}
 		
         [Label("Scavenge from Uncommon Plants")]
         [Tooltip("If false, Players cannot Scavenge from Uncommon Plants, such as Cattails, Lily Pads and Sea Oats.\n[Default: On]")]
@@ -77,47 +70,56 @@ namespace Renewability
         public bool enableScavengingFromUncommonPlants {get; set;}
 		
         [Label("[i:Hay] Hay Scavenge Chance")]
-        [Tooltip("Chance for Uncommon Plants to drop Hay.\n[Default: 4]")]
+        [Tooltip("[Default: 4]")]
         [Slider]
-        [DefaultValue(1)]
+        [DefaultValue(4)]
         [Range(1, 30)]
         [Increment(1)]
-        public int scavengeChanceUncommonPlantsHay {get; set;}
+        public int scavengeChanceCommonPlantsHay {get; set;}
 		
         [Label("[i:Cobweb] Cobweb Scavenge Chance")]
-        [Tooltip("Chance for Uncommon Plants to drop Cobweb.\n[Default: 10]")]
+        [Tooltip("[Default: 10]")]
         [Slider]
-        [DefaultValue(2)]
+        [DefaultValue(10)]
         [Range(1, 30)]
         [Increment(1)]
-        public int scavengeChanceUncommonPlantsCobweb {get; set;}
+        public int scavengeChanceCommonPlantsCobweb {get; set;}
 		
         [Label("[i:Acorn] Acorn Scavenge Chance")]
-        [Tooltip("Chance for Uncommon Plants to drop an Acorn.\n[Default: 20]")]
+        [Tooltip("[Default: 20]")]
         [Slider]
         [DefaultValue(20)]
         [Range(1, 30)]
         [Increment(1)]
-        public int scavengeChanceUncommonPlantsAcorn {get; set;}
+        public int scavengeChanceCommonPlantsAcorn {get; set;}
+		
+        [Label("[i:GreenMoss] Moss Scavenge Chance")]
+        [Tooltip("[Default: 10]")]
+        [Slider]
+        [DefaultValue(10)]
+        [Range(20, 200)]
+        [Increment(20)]
+        public int scavengeChanceCommonPlantsMoss {get; set;}
 		
         [Label("[i:Vine] Vine Scavenge Chance")]
-        [Tooltip("Chance for Uncommon Plants to drop a Vine.\n[Default: 20]")]
+        [Tooltip("[Default: 80]")]
         [Slider]
-        [DefaultValue(20)]
+        [DefaultValue(80)]
         [Range(20, 200)]
         [Increment(20)]
-        public int scavengeChanceUncommonPlantsVine {get; set;}
+        public int scavengeChanceCommonPlantsVine {get; set;}
 		
         [Label("[i:HerbBag] Herb Bag Scavenge Chance")]
-        [Tooltip("Chance for Uncommon Plants to drop an Herb Bag.\n[Default: 40]")]
+        [Tooltip("[Default: 80]")]
         [Slider]
-        [DefaultValue(40)]
+        [DefaultValue(160)]
         [Range(20, 200)]
         [Increment(20)]
-        public int scavengeChanceUncommonPlantsHerbBag {get; set;}
+        public int scavengeChanceCommonPlantsHerbBag {get; set;}
+		*/
 		
         [Label("Scavenge from Vines")]
-        [Tooltip("If false, Players cannot Scavenge from Vines.\n[Default: Off]")]
+        [Tooltip("[Default: Off]")]
         [DefaultValue(false)]
         public bool enableScavengingFromVines {get; set;}
 		
